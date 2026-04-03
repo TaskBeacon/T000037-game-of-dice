@@ -1,0 +1,236 @@
+subinfo_fields:
+  - name: subject_id
+    type: int
+    constraints:
+      min: 101
+      max: 999
+      digits: 3
+
+subinfo_mapping:
+  subject_id: 受试者编号（3位数字）
+  registration_failed: 注册失败
+  registration_successful: 注册成功
+  invalid_input: "字段 {field} 输入无效"
+
+window:
+  size: [1280, 720]
+  units: pix
+  screen: 0
+  bg_color: black
+  fullscreen: false
+  monitor_width_cm: 35.5
+  monitor_distance_cm: 60
+
+task:
+  task_name: game_of_dice
+  save_path: ./outputs/sampler_sim
+  language: Chinese
+  voice_name: zh-CN-YunyangNeural
+  voice_enabled: false
+  total_blocks: 1
+  total_trials: 8
+  trial_per_block: 8
+  conditions:
+    - gdt_standard
+  condition_weights: null
+  key_list: [1, 2, 3, 4]
+  seed_mode: same_across_sub
+  overall_seed: 37037
+  initial_capital: 1000
+  choice_timeout_s: 8.0
+  roll_seed_mode: same_across_sub
+  option_specs:
+    "1":
+      label: 1 个数字
+      match_count: 1
+      win_amount: 1000
+      loss_amount: 1000
+      win_probability: 0.1666667
+    "2":
+      label: 2 个数字
+      match_count: 2
+      win_amount: 500
+      loss_amount: 500
+      win_probability: 0.3333333
+    "3":
+      label: 3 个数字
+      match_count: 3
+      win_amount: 200
+      loss_amount: 200
+      win_probability: 0.5
+    "4":
+      label: 4 个数字
+      match_count: 4
+      win_amount: 100
+      loss_amount: 100
+      win_probability: 0.6666667
+
+timing:
+  fixation_duration: 0.5
+  choice_duration: 8.0
+  outcome_duration: 0.9
+  feedback_duration: 1.0
+  iti_duration: 0.8
+
+stimuli:
+  instruction_text:
+    type: text
+    text: |
+      你将进行 8 轮骰子赌博决策采样模拟。
+      每一轮都要从四个方案中选择一个。
+      1 = 1 个数字，风险最高 / 回报最高
+      2 = 2 个数字
+      3 = 3 个数字
+      4 = 4 个数字，风险最低 / 回报最低
+      如果掷出的点数落在你选择的数字范围内，就赢得相应分数；
+      否则输掉同样分数。
+      初始总分为 1000 分。
+      按空格键开始。
+    color: white
+    height: 28
+    wrapWidth: 1040
+    font: SimHei
+
+  fixation:
+    type: text
+    text: "+"
+    color: white
+    height: 48
+    font: SimHei
+
+  capital_banner:
+    type: text
+    text: "当前总分：{capital}"
+    color: [0.95, 0.95, 0.95]
+    height: 28
+    pos: [0, 265]
+    font: SimHei
+
+  choice_prompt:
+    type: text
+    text: "请选择你要押注的方案（按 1-4）"
+    color: white
+    height: 30
+    pos: [0, 185]
+    font: SimHei
+
+  option_1:
+    type: text
+    text: |
+      1 个数字
+      赢 / 输 1000 分
+      概率 1/6
+    color: [1.0, 0.88, 0.88]
+    height: 26
+    wrapWidth: 180
+    pos: [-450, -20]
+    font: SimHei
+
+  option_2:
+    type: text
+    text: |
+      2 个数字
+      赢 / 输 500 分
+      概率 2/6
+    color: [1.0, 0.93, 0.86]
+    height: 26
+    wrapWidth: 180
+    pos: [-150, -20]
+    font: SimHei
+
+  option_3:
+    type: text
+    text: |
+      3 个数字
+      赢 / 输 200 分
+      概率 3/6
+    color: [0.92, 0.96, 0.88]
+    height: 26
+    wrapWidth: 180
+    pos: [150, -20]
+    font: SimHei
+
+  option_4:
+    type: text
+    text: |
+      4 个数字
+      赢 / 输 100 分
+      概率 4/6
+    color: [0.88, 0.95, 1.0]
+    height: 26
+    wrapWidth: 180
+    pos: [450, -20]
+    font: SimHei
+
+  outcome_text:
+    type: text
+    text: |
+      掷骰结果：{roll}
+      所选方案：{choice_label}
+    color: white
+    height: 42
+    pos: [0, 40]
+    font: SimHei
+
+  feedback_win:
+    type: text
+    text: |
+      本轮赢得 {delta} 分
+      当前总分：{capital}
+    color: white
+    height: 30
+    pos: [0, 10]
+    font: SimHei
+
+  feedback_loss:
+    type: text
+    text: |
+      本轮损失 {delta} 分
+      当前总分：{capital}
+    color: white
+    height: 30
+    pos: [0, 10]
+    font: SimHei
+
+  end_summary:
+    type: text
+    text: |
+      任务完成
+      最终总分：{capital}
+    color: white
+    height: 32
+    pos: [0, 0]
+    font: SimHei
+
+triggers:
+  map:
+    exp_onset: 1
+    exp_end: 2
+    block_onset: 10
+    block_end: 11
+    fixation_onset: 20
+    choice_onset: 30
+    choice_response_key: 31
+    choice_timeout: 32
+    outcome_onset: 40
+    feedback_onset: 50
+    iti_onset: 60
+  policy:
+    strict: false
+
+sim:
+  output_dir: outputs/sampler_sim
+  seed: 0
+  participant_id: sim001
+  session_id: sub-sim001_task-game_of_dice_sampler_seed0
+  log_path: outputs/sampler_sim/sub-sim001_task-game_of_dice_sampler_seed0_sim_events.jsonl
+  policy: warn
+  default_rt_s: 0.25
+  clamp_rt: false
+  responder:
+    type: responders.task_sampler:TaskSamplerResponder
+    kwargs:
+      rt_mean_s: 0.48
+      rt_sd_s: 0.08
+      rt_min_s: 0.15
+      choice_cycle_offset: 0

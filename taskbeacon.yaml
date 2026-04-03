@@ -1,0 +1,21 @@
+id: T000037
+slug: game-of-dice
+title: Game of Dice Task
+acquisition: behavior
+variant: baseline
+cognitive_domain:
+  - risk-perception
+  - decision-making
+  - explicit-risk
+maturity: draft
+version:
+  release_tag: v0.1.0-dev
+contracts:
+  psyflow_taps: v0.1.0
+evidence:
+  - references/references.yaml
+  - references/references.md
+  - references/parameter_mapping.md
+  - references/stimulus_mapping.md
+  - references/task_logic_audit.md
+maintainer: []

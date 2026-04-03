@@ -1,0 +1,91 @@
+task_id: T000037
+generated_at: '2026-04-03T12:32:27Z'
+selection_policy: tiered_mix_high_impact_plus_high_citation_open_access
+citation_threshold: 100
+papers:
+- id: W2161561914
+  title: Decision‐Making Impairments in Patients with Parkinson’s Disease
+  authors:
+  - Matthias Brand
+  - Kirsten Labudda
+  - Elke Kalbe
+  - Rüdiger Hilker
+  - David Emmans
+  - G. Fuchs
+  - Josef Kessler
+  - Hans J. Markowitsch
+  year: 2004
+  journal: Behavioural Neurology
+  doi_or_url: https://doi.org/10.1155/2004/578354
+  citation_count: 223
+  is_high_impact: false
+  open_access: true
+  used_for:
+  - task_workflow
+  - timing_parameters
+  parameter_bindings: {}
+  notes: ''
+- id: W2128601759
+  title: Decision‐making in Parkinson’s disease patients with and without pathological
+    gambling
+  authors:
+  - Malco Rossi
+  - Eliana Roldán Gerschcovich
+  - Delfina de Achával
+  - Santiago Perez‐Lloret
+  - Daniel Cerquetti
+  - Ángel Cammarota
+  - María Inés Nouzeilles
+  - Rodolfo D. Fahrer
+  - Marcelo Merello
+  - R. Leiguarda
+  year: 2009
+  journal: European Journal of Neurology
+  doi_or_url: https://doi.org/10.1111/j.1468-1331.2009.02792.x
+  citation_count: 108
+  is_high_impact: false
+  open_access: true
+  used_for:
+  - task_workflow
+  - timing_parameters
+  parameter_bindings: {}
+  notes: ''
+- id: W1999635028
+  title: 'Dopamine agonists and risk: impulse control disorders in Parkinson''s; disease'
+  authors:
+  - Valerie Voon
+  - Jennifer Gao
+  - Christina Brezing
+  - Mkael Symmonds
+  - Vindhya Ekanayake
+  - Hubert Fernandez
+  - Raymond J. Dolan
+  - Mark Hallett
+  year: 2011
+  journal: Brain
+  doi_or_url: https://doi.org/10.1093/brain/awr080
+  citation_count: 205
+  is_high_impact: true
+  open_access: true
+  used_for:
+  - task_workflow
+  - timing_parameters
+  parameter_bindings: {}
+  notes: ''
+- id: W2901004383
+  title: 'Disentangling Risk and Uncertainty: When Risk-Taking Measures Are Not About
+    Risk'
+  authors:
+  - Kristel De Groot
+  - Roy Thurik
+  year: 2018
+  journal: Frontiers in Psychology
+  doi_or_url: https://doi.org/10.3389/fpsyg.2018.02194
+  citation_count: 122
+  is_high_impact: false
+  open_access: true
+  used_for:
+  - task_workflow
+  - timing_parameters
+  parameter_bindings: {}
+  notes: ''
