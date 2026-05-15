@@ -33,7 +33,7 @@ task:
   conditions:
     - gdt_standard
   condition_weights: null
-  key_list: [1, 2, 3, 4]
+  key_list: ["1", "2", "3", "4"]
   seed_mode: same_across_sub
   overall_seed: 37037
   initial_capital: 1000
@@ -204,6 +204,8 @@ stimuli:
     font: SimHei
 
 triggers:
+  driver:
+    type: mock
   map:
     exp_onset: 1
     exp_end: 2
