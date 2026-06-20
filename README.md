@@ -14,8 +14,6 @@
 | Language | Chinese |
 | Voice Name | zh-CN-YunyangNeural |
 
-![Task Flow](./task_flow.png)
-
 ## 1. Task Overview
 
 Participants complete an explicit-risk dice betting task with four visible gamble options on each trial. Each option corresponds to betting on 1, 2, 3, or 4 die faces with fixed win/loss magnitudes and known probabilities. The task tracks cumulative capital starting at 1000 points, shows the sampled die result after each valid choice, and then displays win/loss feedback with the updated total. Human mode uses 18 trials in a single block, while QA and simulation configs use shorter 8-trial preview runs for fast validation.
