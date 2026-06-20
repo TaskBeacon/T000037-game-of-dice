@@ -22,6 +22,8 @@ Participants complete an explicit-risk dice betting task with four visible gambl
 
 ## 2. Task Flow
 
+![Task Flow](task_flow.png)
+
 ### Block-Level Flow
 
 | Step | Description |
